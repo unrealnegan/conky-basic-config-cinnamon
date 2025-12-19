@@ -1,0 +1,55 @@
+conky.config = {
+	-- Allgemein
+	use_xft = true,
+	font = '123:size=8',
+	xftalpha = 1.0,
+	update_interval = 1,
+	total_run_times = 0,
+	double_buffer = true,
+
+	-- Fenster
+	own_window = true,
+	own_window_type = 'dock',
+	own_window_transparent = false,
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+	-- Darstellung
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	default_color = 'white',
+
+	-- Position & Größe
+	alignment = 'top_middle',
+	gap_x = 0,
+	gap_y = 40,
+	minimum_width = 1000,
+	maximum_width = 1000,
+	minimum_height = 0,
+
+	-- Performance
+	no_buffers = true,
+	override_utf8_locale = true,
+	use_spacer = 'yes',
+};
+
+conky.text = [[
+${voffset 20}
+${alignc}${color EAEAEA}${font GE Inspira:pixelsize=110}${time %H:%M}${font}
+
+${voffset 8}
+${alignc}${color EAEAEA}${font GE Inspira:pixelsize=26}${time %d. %B %Y}${font}
+
+${voffset 4}
+${alignc}${color EAEAEA}${font GE Inspira:pixelsize=26}${time %A}${font}
+
+
+${voffset 14}
+${alignc}${font Ubuntu:pixelsize=20}${color FFA300}HD ${color}${fs_free /} / ${fs_size /}   \
+${color FFA300}RAM ${color}$mem / $memmax   \
+${color FFA300}CPU ${color}${cpu cpu0}%
+]];
+
